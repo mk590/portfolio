@@ -7,14 +7,19 @@ const Projects = () => {
   const [data, setdata] = useState(Pdata)
     return (
         < >
-          this is projects page  
-          <div className="row">
+          <div className="container-fluid my-0" id='projectPage' style={{backgroundColor:'blue'}}>
+          <div className="row my-0">
 
           {data.map((elemant,index)=>{
             console.log(elemant)
-            return <ProjectCard  key={index} {...elemant}/>
+            return (
+              <div className="col-md-3 p-md-3">
+              <ProjectCard  key={index} {...elemant}/>
+              </div>
+            )
           })}
           </div> 
+          </div>
         </>
     )
 }
